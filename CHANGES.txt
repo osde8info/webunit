@@ -1,0 +1,60 @@
+2010-05-05 1.3.10
+ - fix cookie domain matching to allow cookie '.domain.com' to match
+   host 'domain.com'
+
+2007-03-26 1.3.9
+ - send \r\n in mimeEncode (thanks Ivan Kurmanov)
+ - handle Max-Age set to 0 (thanks Matt Chisholm)
+
+2004-01-30 1.3.8
+ - fix syntax error ;)
+
+2004-01-22 1.3.7
+ - fix use of radio/checkbox/select arguments in constructing GET URLs
+   (thanks Jeroen Vloothuis and Alexandre Fayolle)
+ - corrected detection of closing tag for CDATA
+
+2004-01-21 1.3.6
+ - remove debug print
+ - propogate error content
+ - added getById(name, id) to SimpleDOM objects, allowing retrieval by tag
+   type (eg. div) and id (ie. <div id="content">)
+
+2003-11-03 1.3.5
+ - patch from Diez B. Roggisch to handle headers.get('set-cookie', '')
+   returning comma-separated list of Set-Cookies
+ - really changed SmartCookie to SimpleCookie
+ - handle request path == '' but cookie path == '/'
+ - fixes to base url handling
+ - added method clearContext() to clear "browser state" so setUp
+   cookies/auth info/images/base url etc. don't affect tests if you don't
+   want them to
+
+2003-10-29 1.3.4
+ - change older httpslib.HTTPS (M2Crypto) usage to python's httplib.HTTPS
+
+2003-10-10 1.3.3
+ - change use of SmartCookie to SimpleCookie
+
+
+2003-10-08 1.3.2
+ - fixed some bugs here and there
+
+
+2003-09 1.3.1
+ - fixed a bunch of bugs to do with not honoring the <base> tag
+
+
+2003-07 1.3
+ - packaging with distutils now
+ - fixed following of relative urls in requests on HTTPResponse objects
+
+
+2003-06-16 1.2.2
+ - help the WebFetcher cope with '.' form actions (thanks Roché Compaan)
+
+
+2003-05-17 1.2.1
+ - wasn't creating correct DOM node type in SimpleDOM (thanks Roché Compaan)
+
+
